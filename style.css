@@ -1,0 +1,189 @@
+:root {
+  --accent-color: #ffcc00;
+  --text-color: #fff;
+  --heading-font: 'Segoe UI', sans-serif;
+  --baybayin-font: 'Noto Sans Tagalog', sans-serif;
+}
+
+/* Reset + ensure stacking context */
+*,
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;      /* create stacking context for pseudo-element */
+}
+
+html, body {
+  height: 100%;
+  font-family: var(--heading-font);
+  overflow-x: hidden;
+  background: none;        /* no solid cover so ::before shows */
+  color: var(--text-color);
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: url('images/RICE.jpg') center/cover no-repeat;
+  filter: blur(6px) brightness(0.5);
+  z-index: -1;             /* sits behind content but above the base canvas */
+}
+
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(30,30,30,0.7);
+  padding: 1rem;
+  text-align: center;
+}
+
+.header-main {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header-main img {
+  width: 60px;
+  height: auto;
+}
+
+.header-main h1 {
+  font-size: 3rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
+
+.baybayin {
+  font-family: var(--baybayin-font);
+  font-size: 2rem;
+  color: var(--accent-color);
+  margin-top: 0.5rem;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+}
+
+.tagline {
+  font-size: 1.25rem;
+  color: var(--accent-color);
+  margin-top: 0.25rem;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+}
+
+.hero-desc {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: rgba(30,30,30,0.6);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.hero-desc p {
+  font-size: 1.25rem;
+  line-height: 1.6;
+}
+
+main {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.section {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 3rem;
+  background: rgba(30,30,30,0.6);
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.7);
+  transition: background 0.3s;
+}
+
+.section:hover {
+  background: rgba(30,30,30,0.8);
+}
+
+.section:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.section-text {
+  flex: 1 1 60%;
+  padding-right: 1.5rem;
+}
+
+.section-text h2 {
+  font-size: 2rem;
+  color: var(--accent-color);
+  margin-bottom: 0.75rem;
+}
+
+.section-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.section-image {
+  flex: 0 0 35%;
+}
+
+.section-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+footer {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  background: rgba(30,30,30,0.8);
+  box-shadow: 0 -2px 6px rgba(0,0,0,0.7);
+}
+
+footer .authors {
+  font-size: 1rem;
+}
+
+.fade {
+  opacity: 0;
+  transform: translateY(15px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.fade.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+@media (max-width: 768px) {
+  .header-main {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .header-main img {
+    width: 50px;
+  }
+  .header-main h1 {
+    font-size: 2.5rem;
+  }
+  .baybayin {
+    font-size: 1.5rem;
+  }
+  .tagline {
+    font-size: 1rem;
+  }
+  .section {
+    flex-direction: column;
+  }
+  .section-text, .section-image {
+    padding: 0;
+  }
+}
