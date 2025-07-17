@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="tl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hain</title>
+  <!-- Google Font for Baybayin -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tagalog&display=swap" rel="stylesheet">
+  <!-- external stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="fade">
+    <div class="header-main">
+      <!-- use a relative path into your images folder -->
+      <img src="images/HAIN.jpg" alt="HAIN logo">
+      <h1>HAIN</h1>
+    </div>
+    <div class="baybayin">ᜑᜁᜈ᜔</div>
+    <div class="tagline">Sa hain, pag-ibig ang ihahain sa lahat.</div>
+  </header>
+
+  <div class="hero-desc fade">
+    <p>
+      Hain ay ang pag-aalay o paghahain ng pagkain sa hapag. Isa itong simbolo ng pagmamahal, pag-aalaga, at pagkakabuklod ng pamilya o komunidad. Sa kulturang Pilipino, ang hain ay hindi lamang pagkain—ito ay pagkakataong magsama-sama, magbahaginan ng kwento, at magparamdam ng malasakit sa isa’t isa.
+    </p>
+  </div>
+
+  <main>
+    <section class="section fade" id="tiyula">
+      <div class="section-text">
+        <h2>Tiyula Itum</h2>
+        <p>
+         Tiyula Itum
+Ang Tiyula Itum ay isang tradisyonal na putaheng Tausug mula sa Sulu Archipelago sa Pilipinas. Isa itong masarap at maitim na sabaw na karaniwang niluluto gamit ang baka o kambing, at kilala sa kakaibang gamit ng sinunog na laman ng niyog upang makamit ang natatanging kulay at lasa nito. Ang pangalan na "Tiyula Itum" ay nagmula sa salitang Tausug na "tiyula" (sabaw) at "itum" (itim).
+
+Pinagmulan at Kultural na Kahalagahan
+Nagmula ang Tiyula Itum sa mga Tausug sa rehiyon ng Sulu sa Mindanao. Malalim ang ugat nito sa kanilang kultura at karaniwang inihahain sa mga mahahalagang okasyon tulad ng kasalan at mga pagtitipon. Sa ilang konteksto, tinuturing itong "pagkaing pangmaharlika," na nagpapakita ng mataas na pagpapahalaga dito sa loob ng kanilang komunidad.
+
+Ang Maitim na Sabaw
+Ang pinakakilalang katangian ng Tiyula Itum ay ang madilim, halos itim na kulay nito, na nagmumula sa "syunog lahing" o sinunog na laman ng niyog. Ang sangkap na ito ang nagbibigay ng usok at malalim na lasa, na naiiba sa ibang Filipino soups tulad ng nilaga o tinola.
+
+Mga Sangkap at Paghahanda
+Bagama’t karaniwang ginagamit ang baka o kambing bilang pangunahing karne, isinasama rin ang tanglad, luya, luyang dilaw (turmeric), at sili para sa kaunting anghang. Pinapakuluan ang karne kasama ang mga pampalasa at sinunog na niyog hanggang sa lumambot ang karne at magsanib-sanib ang lasa ng mga sangkap.
+
+Makabagong Kahalagahan
+Bagamat may tradisyonal itong pinagmulan, patuloy na minamahal ang Tiyula Itum ng mga Tausug at unti-unti na ring nakikilala at naa-appreciate ng ibang Pilipino. Isa itong paalala ng mayamang pamana ng lutuing Tausug mula sa rehiyon ng Sulu, at isang pagkaing nagpapalalim ng pagkakakilanlan at damdamin ng pagiging bahagi ng komunidad para sa mga lumaki dito.
+        </p>
+      </div>
+      <div class="section-image fade">
+        <img src="https://i0.wp.com/www.angsarap.net/wp-content/uploads/2020/03/Tiyula-Itum.jpg?ssl=1" alt="Tiyula Itum">
+      </div>
+    </section>
+
+    <section class="section fade" id="chef">
+      <div class="section-text">
+        <h2>Chef Miggy Cabel Moreno</h2>
+        <p>
+          Chef Miggy Cabel Moreno is the chef and owner of Palm Grill, a restaurant specializing in Southern Mindanaoan cuisine. He is known for his efforts in promoting the culinary heritage of the region and sharing its stories through his food. Palm Grill is the first and only Southern Mindanaoan restaurant in Luzon
+        </p>
+      </div>
+      <div class="section-image fade">
+        <img src="https://scontent.fmnl3-2.fna.fbcdn.net/v/t39.30808-6/461339138_10233635609742765_1712270878033478979_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeHGpKBBce_OIjBXl018OmTBKsvZqwmQqQ0qy9mrCZCpDX1gm9ZL-D7hB9vfxBekVlKsE_KydNZGRl7rNfJRqVU9&_nc_ohc=FETo6Qbo2GIQ7kNvwH0_-gT&_nc_oc=AdmAd7lleAxVb2q53yY0aeDOdR1lmgDIxT9HMvLXwPxaeep8RLVMFS3x8ONly4BXrAM&_nc_zt=23&_nc_ht=scontent.fmnl3-2.fna&_nc_gid=SSdkAmCaPlarGmX-xp4ubQ&oh=00_AfQ-o-5IffMOdc1QNRkYXejQwQZ5GorVkuCaNPdc8TXlXA&oe=687EEE1D" alt="Chef Miggy">
+      </div>
+    </section>
+  </main>
+
+  <footer class="fade">
+    <p class="authors">
+      Author of website: Jan Milla, Kurt Baltazar, Christopher Realon, Daron Legan, Francoise Rodriguez
+    </p>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => entry.isIntersecting && entry.target.classList.add('visible'));
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
